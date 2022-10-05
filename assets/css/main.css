@@ -2361,6 +2361,28 @@ input, select, textarea {
 		}
 
 /* Image */
+	.icon-major {
+		border: solid 1px;
+    /* display: inline-block; */
+    border-radius: 5px;
+    padding: 0.65em;
+    margin: 0 0 2em 0;
+    cursor: default;
+    width: 100%;
+    height: 12em;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+	}
+
+	.icon-major > img {
+		object-fit: cover;
+    width: 100%;
+	}
 
 	.image {
 		border-radius: 8px;
