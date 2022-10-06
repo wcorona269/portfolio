@@ -1826,6 +1826,10 @@ input, select, textarea {
 
 /* Button */
 
+	#button {
+		margin: .3em;
+	}
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -2475,10 +2479,11 @@ input, select, textarea {
 
 	dl {
 		margin: 0 0 2em 0;
+		text-align: left;
 	}
 
 		dl dt {
-			display: block;
+			/* display: block; */
 			font-weight: 400;
 			margin: 0 0 1em 0;
 		}
@@ -2884,15 +2889,35 @@ input, select, textarea {
 /* Statistics */
 
 	.statistics {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		width: 100%;
-		margin: 0 0 3em 0;
-		padding: 0;
-		list-style: none;
-		cursor: default;
+		display: -moz-grid;
+    display: -webkit-grid;
+    display: -ms-grid;
+    display: grid;
+		justify-content: center;
+		align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    -moz-grid-template-columns: repeat(5, 1fr);
+    -webkit-grid-template-columns: repeat(5, 1fr);
+    -ms-grid-template-columns: repeat(5, 1fr);
+    -ms-grid-columns: (1fr);
+    width: 100%;
+    margin: 0 0 3em 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
+	}
+
+	.statistics img {
+		height: 1em;
+		width: 1em;
+		font-size: 5em;
+    padding-bottom: 20px;
+		margin: auto;
+		align-items: center;
+		align-self: center;
+		object-fit: contain;
+		color: transparent;
+		text-align: center;
 	}
 
 		.statistics li {
@@ -3719,11 +3744,17 @@ input, select, textarea {
 		padding: 5em 5em 3em 5em ;
 		width: calc(100% + 2em);
 		margin: 0 0 3em -2em;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
 	}
 
 		#footer > * {
-			width: calc(50% - 2em);
-			margin-left: 2em;
+			/* width: calc(50% - 2em); */
+			width: fit-content;
+			/* margin-left: 2em; */
+			align-items: center;
+			justify-content: center;
 		}
 
 		#footer .copyright {
